@@ -4,12 +4,13 @@ int appWidth, appHeight, largerDimension, smallerDimension;
 void setup() {
   size(600, 400);
   //fullScreen(); //displayWidth, displayHeight
-  //Display Algorithm from Hello World
   appWidth = width;
   appHeight = height;
-  largerDimension = ; //From Display Algorithm
-  smallerDimension = ; //From Display Algorithm
-  
+  //Display Algorithm from Hello World
+  display(); 
+  //smaller & larger imension from Display Algorithm
+  println("Display Monitor:", "\twidth="+displayWidth, "& height="+displayHeight);
+  //
 }//End setup
 //
 void draw() {
