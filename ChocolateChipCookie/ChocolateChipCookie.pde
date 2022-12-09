@@ -12,6 +12,7 @@ void setup() {
   //smaller & larger imension from Display Algorithm
   println("Display Monitor:", "\twidth="+displayWidth, "& height="+displayHeight);
   population(); //Values based on DISPLAY
+  textSetup();
   //
 }//End setup
 //
