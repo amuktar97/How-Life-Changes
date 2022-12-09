@@ -1,6 +1,6 @@
 String spaceBar = "Press the Space Bar to Continue";
 PFont font;
-color resetBefaultInk=#000000, purple=#A00591; //Not for Night Mode, full BLUR
+color resetBefaultInk=#000000, purple=#FF00FF; //Not for Night Mode, full BLUR
 /* Night Mode Comment 
  Purple not for Night Mode, full BLUE
  resetDefaultInk is Night Mode friendly
