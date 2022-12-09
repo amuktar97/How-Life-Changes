@@ -1,6 +1,14 @@
 String spaceBar = "Press the Space Bar to Continue";
+PFont font;
 //
-void textSetup() {}//End textSetup
+void textSetup() {
+  //One FONT only here
+  //Fonts from OS (Operating System)
+  // String[] fontList = PFont.list(); //To list all fonts available on OS
+  //printArray(fontList); //For listing all possible fonts to choose from, then createFont
+  font = createFont("Harrington", 55); //Verify the font exists in Processing.Java
+  // Tools / Create Font / Find Font / Do not press "OK", known bug
+}//End textSetup
 //
 void spaceBarText() {
   rect(startX, startY, startWidth, startHeight);
