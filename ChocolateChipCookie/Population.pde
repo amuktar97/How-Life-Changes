@@ -3,7 +3,8 @@ void population() {
   startWidth= appWidth*1/2;
   startHeight= appHeight*1/10;
   startX= centerX - appWidth*1/2;
-  startY = centerY - appHeight*1/2; //Half the button Height
+  startY = centerY - appHeight*1/2;
+  //
 }//End Population
 //
 //End Population Subprogram
