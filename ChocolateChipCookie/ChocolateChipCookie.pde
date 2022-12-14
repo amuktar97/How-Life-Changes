@@ -38,6 +38,7 @@ void keyPressed() {
   }//End Splash Screen SPACE Bar
   //
   //Key Board Short Cuts
+  if ( key==CODED || keyCode==ESC) exit();
   if ( key=='Q' || key=='q' ) exit(); //Option ESC with keyCode
   if ( key=='N' || key=='n' ) {
     if ( nightMode==false ) { 
