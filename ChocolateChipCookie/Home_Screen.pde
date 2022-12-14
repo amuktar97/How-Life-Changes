@@ -15,6 +15,8 @@ void homeScreen() { //Exists in VIOD DRAW
   -see Case Study
   -Note: must have one image with aspect ratio
   */
+  //"Quit Text"
+  quitButtonText();
   rect(quitX, quitY, quitWidth, quitHeight); //quit button 
   //
 }//End homeScreen
