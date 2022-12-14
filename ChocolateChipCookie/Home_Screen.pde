@@ -2,22 +2,25 @@ float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
 int tintDayMode=255, tintDayModeOpacity=50;
 //Blue might change, starts at zero
-int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpacity=80;
+int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpacity=85;
 //
-void homeScreen() { //Exists in VIOD DRAW
+void homeScreen() { //Exists in VOID DRAW
   println("Arrived at Home Screen"); //Testing for Splash Screen Start Button working
   /* Home Screen Expectations
-  -Background image using tint()
-  -9 evenly spaced rectangles
-  -Quit Button and Reset Button (Splash Screen Start Button)
-  -In each: image, text, 2D Shape, Button
-  -Narartive through the 9 rectangles
-  -see Case Study
-  -Note: must have one image with aspect ratio
-  */
-  //"Quit Text"
-  quitButtonText();
-  rect(quitX, quitY, quitWidth, quitHeight); //quit button 
+   - Background image using tint()
+   - 9 evenly spaced rectangles, Assignment #3
+   - Quit Button and Reset Button (Splash Screen Start Button)
+   - In each: image, text, 2D Shape, Button
+   - Narartive through the 9 rectangels
+   - See Case Study
+   - Note: must have one image with aspect ratio
+   */
+
+  if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) {
+  } else { 
+    quitButtonText();
+  }
+  rect( quitX, quitY, quitWidth, quitHeight ); //quit button
   //
 }//End homeScreen
 //
