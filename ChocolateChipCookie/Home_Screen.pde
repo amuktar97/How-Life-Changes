@@ -20,17 +20,24 @@ void homeScreen() { //Exists in VIOD DRAW
 void backgroundWhiteScreen() {
   fill(white);
   noStroke();
-  rect(backgroundX, backgroundY, backgroundWidth, backgroundHeight); //White colour
+  rect( backgroundX, backgroundY, backgroundWidth, backgroundHeight ); //white colour
   stroke(1); //Reset: 1 pixel
   fill(white); //Reset: white
-}//End backgroundWhiteScreen 
+}//End backgroundWhiteScreen
 //
 void backgroundImage() {
   backgroundWhiteScreen();
-  tint(tintDayMode, tintDayModeOpacity); 
-  //tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  //Control night mode, colour, with IF 
+  //if (nightMode==true) tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  //if (nightMode==false) tint(tintDayMode, tintDayModeOpacity);
+  if ( nightMode==true ) {
+    tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  } else {
+    tint(tintDayMode, tintDayModeOpacity);
+  }
+  //End Night Mode Control
   image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
-  //image with tint() 
-}//End backgroungImage
+  //image with tint()
+}//End backgroundImage
 //
 //End Home Screen Subprogram
