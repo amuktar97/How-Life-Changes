@@ -26,6 +26,9 @@ void quitButtonImage() {
     imageHeightRatio = smallerDimension / largerDimension; //value<1, main point of algorithm
     quitButtonImageHeight_Calculated = imageHeightRatio * quitButtonImageRectWidth;
     //
+    image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Adjusted, quitButtonImageHeight_Calculated );
+    //
+    //
   } else {//Portrait
     largerDimension = quitButtonImageHeight;
     smallerDimension = quitButtonImageWidth;
@@ -38,7 +41,7 @@ void quitButtonImage() {
     image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Calculated, quitButtonImageHeight_Adjusted );
     //
   }
-  image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY,  );
+  image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY);
 }//End quitButtonImage
 //
 //End Image Subprogram
