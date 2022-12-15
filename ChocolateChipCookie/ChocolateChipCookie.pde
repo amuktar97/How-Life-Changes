@@ -3,6 +3,7 @@ int appWidth, appHeight, largerDimension, smallerDimension;
 Boolean OS_On=false, splashScreenStart=false;
 Boolean nightMode = false; //Bonus #1: populate with system clock
 //Ultimate Bonus, Gr 11: use API-sunrise for system clock start 
+//Hint: https://processing.org/reference/hour_.html
 color resetDefaultInk=#000000, white=#FFFFFF,purple=#FF00FF;
 /* Night Mode Comment
  Purple not for Night Mode, full BLUE
@@ -57,6 +58,7 @@ void keyPressed() {
 void mousePressed() {
   //OS Level MouseClick
   if ( OS_On==false ) OS_On=true;//End OS Level MouseClick
+  if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) exit();
 }//End mousePressed
 //
 //End MAIN Program
