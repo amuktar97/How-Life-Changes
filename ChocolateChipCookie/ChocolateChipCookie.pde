@@ -1,6 +1,7 @@
 //Global Variables
 int appWidth, appHeight, largerDimension, smallerDimension;
 Boolean OS_On=false, splashScreenStart=false;
+Boolean Daymode = false, Nightmode = false;
 Boolean nightMode = false; //Bonus #1: populate with system clock
 //Ultimate Bonus, Gr 11: use API-sunrise for system clock start 
 //Hint: https://processing.org/reference/hour_.html
@@ -22,6 +23,7 @@ void setup() {
   population(); //Values based on DISPLAY
   textSetup();
   imageSetup();
+  Rectangles();
 }//End setup
 //
 void draw() {
