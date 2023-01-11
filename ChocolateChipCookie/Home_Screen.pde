@@ -1,7 +1,10 @@
+PImage img1, img2, img3, img4, img5, img6, img7, img8, img9;
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
 float Rect1Width,Rect1Height, Rect1X, Rect1Y, Rect2Width, Rect2Height, Rect2X, Rect2Y;
+float LineX1, LineX2, LineY1, LineY2;
+float Line2X1, Line2X2, Line2Y1, Line2Y2;
 int tintDayMode=255, tintDayModeOpacity=50;
 //Blue might change, starts at zero
 int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpacity=85;

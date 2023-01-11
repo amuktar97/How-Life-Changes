@@ -1,6 +1,6 @@
 //Global Variables
 int appWidth, appHeight, largerDimension, smallerDimension;
-Boolean OS_On=false, splashScreenStart=false;
+Boolean OS_On=false, splashScreenStart=false, homeScreen=false;
 Boolean Daymode = false, Nightmode = false;
 Boolean nightMode = false; //Bonus #1: populate with system clock
 //Ultimate Bonus, Gr 11: use API-sunrise for system clock start 
@@ -23,13 +23,24 @@ void setup() {
   population(); //Values based on DISPLAY
   textSetup();
   imageSetup();
-  Rectangles();
 }//End setup
 //
 void draw() {
   //Assignemnt #2: OS Level Mouse CLick and Splash Screen
   if ( OS_On==true && splashScreenStart==false) splashScreen(); //OS Level MOUSE Click
   if ( splashScreenStart==true ) homeScreen();
+  if ( homeScreen==true) ;
+  //
+  //Draw the image in 3x3 grid
+  image (img1, 0, 0, 200, 200);
+  image (img2, 200, 0, 200, 200); 
+  image (img3, 400, 0, 200, 200);
+  image (img4, 0, 200, 200, 200);
+  image (img5, 200, 200, 200, 200);
+  image (img6, 400, 200, 200, 200);
+  image (img7, 0, 400, 200, 200);
+  image (img8, 200, 400, 200, 200);
+  image (img9, 400, 400, 200, 209);
   //
 }//End draw
 //
