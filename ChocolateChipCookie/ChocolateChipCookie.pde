@@ -32,7 +32,7 @@ void draw() {
   if ( homeScreen==true) ;
   //
   //Draw the image in 3x3 grid
-  image (img1, 0, 0, 200, 200);
+  image (img1, 1, 0, 200, 200);
   image (img2, 200, 0, 200, 200); 
   image (img3, 400, 0, 200, 200);
   image (img4, 0, 200, 200, 200);
