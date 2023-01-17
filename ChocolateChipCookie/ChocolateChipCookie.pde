@@ -12,7 +12,7 @@ color resetDefaultInk=#000000, white=#FFFFFF,purple=#FF00FF;
  */
 //
 void setup() {
-  size(700, 700);
+  size(600, 400);
   //fullScreen(); //displayWidth, displayHeight
   appWidth = width;
   appHeight = height;
@@ -30,7 +30,7 @@ void draw() {
   if ( OS_On==true && splashScreenStart==false) splashScreen(); //OS Level MOUSE Click
   if ( splashScreenStart==true ) homeScreen();
   if ( homeScreen==true) ;
-    rect(width*1.25/4, height*1.6/5, width*1/4, height*2.5/10);//game board 1
+    rect(width*1/6/2, height*1/2/5, width*1/4, height*2.5/10);//game board 1
     rect(width*2.45/5, height*1.6/5, width*1/4, height*2.5/10);//game board 2
     rect(width*3.7/5, height*1.6/5, width*1/4, height*2.5/10);//game board 3
 
@@ -44,9 +44,7 @@ void draw() {
     rect(width*2.45/5, height*4.1/5, width*1/4, height*2.5/10);//game board 8
     rect(width*3.7/5, height*4.1/5, width*1/4, height*2.5/10);//game board 9
   
-}
-  //
-
+}//End draw
 //
 void keyPressed() {
   //Splash Screen SPACE Bar
