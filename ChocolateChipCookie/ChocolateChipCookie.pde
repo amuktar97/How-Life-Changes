@@ -30,19 +30,19 @@ void draw() {
   if ( OS_On==true && splashScreenStart==false) splashScreen(); //OS Level MOUSE Click
   if ( splashScreenStart==true ) homeScreen();
   if ( homeScreen==true) ;
-    rect(width*1/6/2, height*1/2/5, width*1/4, height*2.5/10);//game board 1
-    rect(width*2.45/5, height*1.6/5, width*1/4, height*2.5/10);//game board 2
-    rect(width*3.7/5, height*1.6/5, width*1/4, height*2.5/10);//game board 3
+    rect(0,0,width*1/3, height*1/3);//game board 1
+    rect(0,0,width*1/3, height*2/3);//game board 2
+    rect(0,0,width*1/3, height*3/3);//game board 3
 
     //column 2
-    rect(width*1.25/5, height*2.87/5, width*1/4, height*2.5/10);//game board 4
-    rect(width*2.45/5, height*2.87/5, width*1/4, height*2.5/10);//game board 5
-    rect(width*3.7/5, height*2.87/5, width*1/4, height*2.5/10);//game board 6
+    rect(0,0,width*2/3, height*1/3);//game board 4
+    rect(0,0,width*2/3, height*2/3);//game board 5
+    rect(0,0,width*2/3, height*3/3);//game board 6
 
     //column 3
-    rect(width*1.25/5, height*4.1/5, width*1/4, height*2.5/10);//game board 7
-    rect(width*2.45/5, height*4.1/5, width*1/4, height*2.5/10);//game board 8
-    rect(width*3.7/5, height*4.1/5, width*1/4, height*2.5/10);//game board 9
+    rect(0,0,width*3/3, height*1/3);//game board 7
+    rect(0,0,width*3/3, height*2/3);//game board 8
+    rect(0,0,width*3/3, height*3/3);//game board 9
   
 }//End draw
 //
