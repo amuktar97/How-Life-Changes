@@ -1,23 +1,34 @@
-PImage backgroundImage, quitButtonImage, gameboard1,gameboard2, gameboard3, gameboard4, gameboard5, gameboard6, gameboard7, gameboard8, gameboard9;
+PImage backgroundImage, quitButtonImage, img1, img2, img3, img4, img5, img6, img7, img8, img9;
 //
 void imageSetup() {//Image Population
   backgroundImage=loadImage("../Image/istockphoto-1089141884-612x612.jpg");
-           gameboard1=loadImage("../Image Used/istockphoto-950149718-612x612.jpg");
-           gameboard2=loadImage("../Image Used/10-Benefits-Showing-Why-Education-Is-Important-to-Our-Society.jpg");
-           gameboard3=loadImage("../Image Used/download.jpg");
-           gameboard4=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
-           gameboard5=loadImage("../Image Used/Multicultural-character.jpg");
-           gameboard6=loadImage("../Image Used/Time-for-a-Change.jpg");
-           gameboard7=loadImage("../Image Used/traditional-turkish-breakfast.jpg");
-           gameboard8=loadImage("../Image Used/getty_473428732_201326.jpg");
-           gameboard9=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
+           img1=loadImage("../Image Used/istockphoto-950149718-612x612.jpg");
+           img2=loadImage("../Image Used/10-Benefits-Showing-Why-Education-Is-Important-to-Our-Society.jpg");
+           img3=loadImage("../Image Used/download.jpg");
+           img4=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
+           img5=loadImage("../Image Used/Multicultural-character.jpg");
+           img6=loadImage("../Image Used/Time-for-a-Change.jpg");
+           img7=loadImage("../Image Used/traditional-turkish-breakfast.jpg");
+           img8=loadImage("../Image Used/getty_473428732_201326.jpg");
+           img9=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
   //quitButtonImage is loaded here if different
 }//End imageSetup
+//
+void imageTintNightMode() {
+  //Control night mode, colour, with IF 
+  //if (nightMode==true) tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  //if (nightMode==false) tint(tintDayMode, tintDayModeOpacity);
+  if ( nightMode==true ) {
+    tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
+  } else {
+    tint(tintDayMode, tintDayModeOpacity);
+  }
+}//End imageTintNightMode
 //
 void quitButtonImage() {
   quitButtonImage = backgroundImage;
   //
-//Image Dimensions
+  //Image Dimensions
   float quitButtonImageWidth=1707, quitButtonImageHeight=2560;
   //rect( quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
   //Following vars must be populated or debugger error
@@ -38,6 +49,7 @@ void quitButtonImage() {
     //Debugging: x-value must be centered
     float centerX=appWidth*1/2;
     quitButtonImageRectX = centerX - quitButtonImageWidth_Adjusted * 1/2;
+    imageTintNightMode();
     image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Adjusted, quitButtonImageHeight_Calculated );
     //
   } else {//Portrait
@@ -52,6 +64,7 @@ void quitButtonImage() {
     //Debugging: x-value must be centered
     float centerX=appWidth*1/2;
     quitButtonImageRectX = centerX - quitButtonImageWidth_Calculated * 1/2;
+    imageTintNightMode();
     image( quitButtonImage, quitButtonImageRectX, quitButtonImageRectY, quitButtonImageWidth_Calculated, quitButtonImageHeight_Adjusted );
     //
   }

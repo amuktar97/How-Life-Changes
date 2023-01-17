@@ -12,7 +12,7 @@ color resetDefaultInk=#000000, white=#FFFFFF,purple=#FF00FF;
  */
 //
 void setup() {
-  size(600, 400);
+  size(600, 600);
   //fullScreen(); //displayWidth, displayHeight
   appWidth = width;
   appHeight = height;
@@ -30,19 +30,18 @@ void draw() {
   if ( OS_On==true && splashScreenStart==false) splashScreen(); //OS Level MOUSE Click
   if ( splashScreenStart==true ) homeScreen();
   if ( homeScreen==true) ;
-    rect(0,0,width*1/3, height*1/3);//game board 1
-    rect(0,0,width*1/3, height*2/3);//game board 2
-    rect(0,0,width*1/3, height*3/3);//game board 3
-
-    //column 2
-    rect(0,0,width*2/3, height*1/3);//game board 4
-    rect(0,0,width*2/3, height*2/3);//game board 5
-    rect(0,0,width*2/3, height*3/3);//game board 6
-
-    //column 3
-    rect(0,0,width*3/3, height*1/3);//game board 7
-    rect(0,0,width*3/3, height*2/3);//game board 8
-    rect(0,0,width*3/3, height*3/3);//game board 9
+    image(img1, 0, 0, 200, 200);
+    image(img2, 200, 0, 200, 200);
+    image(img3, 400, 0, 200, 200);
+  
+    image(img4, 0, 200, 200, 200);
+    image(img5, 200, 200, 200, 200);
+    image(img6, 400, 200, 200, 200);
+  
+    image(img7, 0, 400, 200, 200);
+    image(img8, 200, 400, 200, 200);
+    image(img9, 400, 400, 200, 200);
+    
   
 }//End draw
 //
@@ -54,26 +53,30 @@ void keyPressed() {
   }//End Splash Screen SPACE Bar
   //
   //Key Board Short Cuts
-  if ( key==CODED || keyCode==ESC) exit();
-  if ( key=='Q' || key=='q' ) exit(); //Option ESC with keyCode
-  if ( key=='N' || key=='n' ) {
-    if ( nightMode==false ) { 
-      nightMode = true;
-      backgroundImage();
-      //Reminder: must redraw all of rectangles too, and Home Screen
-    } else { 
-      nightMode = false;
-      backgroundImage();
-      //Reminder: must redraw all of rectangles too, and Home Screen
+  if ( splashScreenStart==true ) {//Home Screen Only Variables
+    if ( key==CODED || keyCode==ESC ) exit();
+    if ( key=='Q' || key=='q' ) exit();
+    if ( key=='N' || key=='n' ) {
+      if ( nightMode==false ) { 
+        nightMode = true;
+        backgroundImage();
+        //Reminder: must redraw all of rectangles too, and Home Screen
+      } else { 
+        nightMode = false;
+        backgroundImage();
+        //Reminder: must redraw all of rectangles too, and Home Screen
+      }
     }
-  }
+  }//Home Screen Only
   //
 }//End keyPressed
 //
 void mousePressed() {
   //OS Level MouseClick
   if ( OS_On==false ) OS_On=true;//End OS Level MouseClick
-  if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) exit();
+  if ( splashScreenStart==true ) {//Home Screen Only Variables
+    if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) exit();
+  }//Home Screen Only
   //
 }//End mousePressed
 //

@@ -1,9 +1,6 @@
 float backgroundX, backgroundY, backgroundWidth, backgroundHeight;
 float quitX, quitY, quitWidth, quitHeight;
 float quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight;
-float Rect1Width,Rect1Height, Rect1X, Rect1Y, Rect2Width, Rect2Height, Rect2X, Rect2Y;
-float LineX1, LineX2, LineY1, LineY2;
-float Line2X1, Line2X2, Line2Y1, Line2Y2;
 int tintDayMode=255, tintDayModeOpacity=50;
 //Blue might change, starts at zero
 int tintRed=64, tintGreen=64, tintBlue=0, tintNightModeOpacity=85;
@@ -22,10 +19,24 @@ void homeScreen() { //Exists in VOID DRAW
 //
 //Quit Button, move to Button Subprogram
   if ( mouseX>=quitX && mouseX<=quitX+quitWidth && mouseY>=quitY && mouseY<=quitY+quitHeight ) {
+    /*
     fill(white); //Testing Only
     rect( quitX, quitY, quitWidth, quitHeight ); //Testing Only
     noFill(); //Testing Only
+    */
+    noStroke();
+    fill(white);
+    rect( quitButtonImageRectX, quitButtonImageRectY, quitButtonImageRectWidth, quitButtonImageRectHeight );
+    noFill();
+    stroke(1); //reset dedault
+    imageTintNightMode();
+    quitButtonImage(); //In Aspect Ratio
   } else { 
+    noStroke();
+    fill(white);
+    rect( quitX, quitY, quitWidth, quitHeight );
+    noFill();
+    stroke(1); //reset dedault
     quitButtonText();
   }
   //rect( quitX, quitY, quitWidth, quitHeight );
@@ -42,15 +53,7 @@ void backgroundWhiteScreen() {
 //
 void backgroundImage() {
   backgroundWhiteScreen();
-  //Control night mode, colour, with IF 
-  //if (nightMode==true) tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
-  //if (nightMode==false) tint(tintDayMode, tintDayModeOpacity);
-  if ( nightMode==true ) {
-    tint(tintRed, tintGreen, tintBlue, tintNightModeOpacity);
-  } else {
-    tint(tintDayMode, tintDayModeOpacity);
-  }
-  //End Night Mode Control
+  imageTintNightMode();
   image(backgroundImage, backgroundX, backgroundY, backgroundWidth, backgroundHeight);
   //image with tint()
 }//End backgroundImage
