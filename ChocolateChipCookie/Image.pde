@@ -1,7 +1,16 @@
-PImage backgroundImage, quitButtonImage;
+PImage backgroundImage, quitButtonImage, gameboard1,gameboard2, gameboard3, gameboard4, gameboard5, gameboard6, gameboard7, gameboard8, gameboard9;
 //
 void imageSetup() {//Image Population
   backgroundImage=loadImage("../Image/istockphoto-1089141884-612x612.jpg");
+           gameboard1=loadImage("../Image Used/istockphoto-950149718-612x612.jpg");
+           gameboard2=loadImage("../Image Used/10-Benefits-Showing-Why-Education-Is-Important-to-Our-Society.jpg");
+           gameboard3=loadImage("../Image Used/download.jpg");
+           gameboard4=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
+           gameboard5=loadImage("../Image Used/Multicultural-character.jpg");
+           gameboard6=loadImage("../Image Used/Time-for-a-Change.jpg");
+           gameboard7=loadImage("../Image Used/traditional-turkish-breakfast.jpg");
+           gameboard8=loadImage("../Image Used/getty_473428732_201326.jpg");
+           gameboard9=loadImage("../Image Used/91EnAM4fBnS._AC_SY450_.jpg");
   //quitButtonImage is loaded here if different
 }//End imageSetup
 //
